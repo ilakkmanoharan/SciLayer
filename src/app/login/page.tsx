@@ -45,21 +45,10 @@ export default async function LoginPage({
 
         {!orcidReady && !error ? (
           <div className="mt-5 rounded-2xl bg-amber-50 p-4 text-sm text-amber-950">
-            <p className="font-bold">ORCID sign-in is not configured on this server yet</p>
+            <p className="font-bold">ORCID sign-in is not fully configured on this server.</p>
             <p className="mt-2">
-              Add these environment variables (Vercel → Settings → Environment Variables, or{" "}
-              <code>.env.local</code> locally), then redeploy or restart{" "}
-              <code>npm run dev</code>:
-            </p>
-            <ul className="mt-3 list-disc space-y-1 pl-5 font-mono text-xs">
-              <li>ORCID_CLIENT_ID</li>
-              <li>ORCID_CLIENT_SECRET</li>
-              <li>AUTH_SECRET</li>
-              <li>ORCID_REDIRECT_URI=https://sci-layer.vercel.app/api/orcid/callback</li>
-            </ul>
-            <p className="mt-3 text-xs">
-              In ORCID Developer Tools, register only this HTTPS redirect URI (production
-              ORCID does not accept <code>http://localhost</code>).
+              The site administrator must set <code>ORCID_CLIENT_ID</code>,{" "}
+              <code>ORCID_CLIENT_SECRET</code>, and <code>AUTH_SECRET</code>, then redeploy.
             </p>
           </div>
         ) : null}
@@ -72,12 +61,7 @@ export default async function LoginPage({
 
         <Link
           href={`/api/orcid/login?next=${encodeURIComponent(next)}`}
-          aria-disabled={!orcidReady}
-          className={`mt-6 inline-flex rounded-full px-5 py-3 text-sm font-bold text-white ${
-            orcidReady
-              ? "bg-slate-950 hover:bg-slate-800"
-              : "pointer-events-none bg-slate-400"
-          }`}
+          className="mt-6 inline-flex rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white hover:bg-slate-800"
         >
           Continue with ORCID iD
         </Link>
