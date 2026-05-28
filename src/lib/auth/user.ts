@@ -1,4 +1,4 @@
-import { UserRole } from "@prisma/client";
+import { UserRole } from "@/lib/auth/types";
 import { redirect } from "next/navigation";
 import { getSession, type SessionUser } from "@/lib/auth/session";
 import { prisma } from "@/lib/prisma";
@@ -25,7 +25,7 @@ export async function upsertResearcherFromOrcid(input: {
       id: `orcid-${input.orcidId}`,
       orcidId: input.orcidId,
       name: input.name,
-      role: UserRole.AUTHOR,
+      role: "AUTHOR" satisfies UserRole,
     };
   }
 
@@ -36,7 +36,7 @@ export async function upsertResearcherFromOrcid(input: {
         orcidId: input.orcidId,
         name: input.name,
         email: input.email ?? undefined,
-        role: UserRole.AUTHOR,
+        role: "AUTHOR",
       },
       update: {
         name: input.name,
@@ -50,7 +50,7 @@ export async function upsertResearcherFromOrcid(input: {
       id: `orcid-${input.orcidId}`,
       orcidId: input.orcidId,
       name: input.name,
-      role: UserRole.AUTHOR,
+      role: "AUTHOR" satisfies UserRole,
     };
   }
 }

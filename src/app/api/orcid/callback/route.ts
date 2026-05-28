@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import type { UserRole } from "@/lib/auth/types";
 import { createSession } from "@/lib/auth/session";
 import { upsertResearcherFromOrcid } from "@/lib/auth/user";
 import { exchangeOrcidCode, getAppOrigin } from "@/lib/orcid";
@@ -33,7 +34,7 @@ export async function GET(request: NextRequest) {
       userId: user.id,
       orcidId: user.orcidId,
       name: user.name,
-      role: user.role,
+      role: user.role as UserRole,
     });
 
     const nextPath = request.cookies.get("scilayer_auth_next")?.value ?? "/dashboard";
