@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { exchangeOrcidCode } from "@/lib/orcid";
+import { createSession } from "@/lib/auth/session";
+import { upsertResearcherFromOrcid } from "@/lib/auth/user";
+import { exchangeOrcidCode, getAppOrigin } from "@/lib/orcid";
 
 export async function GET(request: NextRequest) {
   const code = request.nextUrl.searchParams.get("code");
@@ -20,24 +22,25 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const token = await exchangeOrcidCode(code, request.nextUrl.origin);
-    const session = Buffer.from(
-      JSON.stringify({
-        orcid: token.orcid,
-        name: token.name ?? "SciLayer researcher",
-        authenticatedAt: new Date().toISOString(),
-      }),
-    ).toString("base64url");
-
-    const response = NextResponse.redirect(new URL("/submit", request.url));
-    response.cookies.set("scilayer_orcid_session", session, {
-      httpOnly: true,
-      sameSite: "lax",
-      secure: process.env.NODE_ENV === "production",
-      path: "/",
-      maxAge: 60 * 60 * 24 * 30,
+    const origin = getAppOrigin(request.nextUrl.origin);
+    const token = await exchangeOrcidCode(code, origin);
+    const user = await upsertResearcherFromOrcid({
+      orcidId: token.orcid,
+      name: token.name ?? "SciLayer researcher",
     });
+
+    await createSession({
+      userId: user.id,
+      orcidId: user.orcidId,
+      name: user.name,
+      role: user.role,
+    });
+
+    const nextPath = request.cookies.get("scilayer_auth_next")?.value ?? "/dashboard";
+    const safeNext = nextPath.startsWith("/") && !nextPath.startsWith("//") ? nextPath : "/dashboard";
+    const response = NextResponse.redirect(new URL(safeNext, request.url));
     response.cookies.delete("scilayer_orcid_state");
+    response.cookies.delete("scilayer_auth_next");
 
     return response;
   } catch {

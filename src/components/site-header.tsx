@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AuthNav } from "@/components/auth-nav";
 
 const navItems = [
   { href: "/articles", label: "Articles" },
@@ -22,12 +23,7 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/login"
-            className="rounded-full bg-slate-950 px-4 py-2 text-white hover:bg-slate-800"
-          >
-            Log in
-          </Link>
+          <AuthNav />
         </nav>
       </div>
     </header>

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getSession } from "@/lib/auth/session";
 import { classifyManuscript } from "@/lib/classification";
 import { buildReviewerInvitationEmail } from "@/lib/email";
 import { awardPoints } from "@/lib/points";
@@ -9,6 +10,11 @@ import {
 } from "@/lib/validation";
 
 export async function POST(request: NextRequest) {
+  const session = await getSession();
+  if (!session) {
+    return NextResponse.json({ error: "Authentication required." }, { status: 401 });
+  }
+
   const payload = await request.json().catch(() => null);
   const parsed = validateGithubSubmission(payload);
 
@@ -35,7 +41,7 @@ export async function POST(request: NextRequest) {
   const reviewerEmailPreview = buildReviewerInvitationEmail({
     reviewerName: "Reviewer",
     articleTitle: title,
-    authors: ["Authenticated ORCID author"],
+    authors: [session.name],
     field: classification.field,
     subfield: classification.subfield,
     tags: classification.tags,

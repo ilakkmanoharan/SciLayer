@@ -14,8 +14,27 @@ export function hasOrcidCredentials() {
   return Boolean(process.env.ORCID_CLIENT_ID && process.env.ORCID_CLIENT_SECRET);
 }
 
+export function hasAuthSecret() {
+  return Boolean(process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET);
+}
+
+export function getAppOrigin(fallbackOrigin: string) {
+  if (process.env.NEXTAUTH_URL) {
+    return process.env.NEXTAUTH_URL.replace(/\/$/, "");
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return fallbackOrigin.replace(/\/$/, "");
+}
+
 export function getOrcidRedirectUri(origin: string) {
-  return process.env.ORCID_REDIRECT_URI ?? `${origin}/api/orcid/callback`;
+  if (process.env.ORCID_REDIRECT_URI) {
+    return process.env.ORCID_REDIRECT_URI;
+  }
+
+  const appOrigin = getAppOrigin(origin);
+  return `${appOrigin}/api/orcid/callback`;
 }
 
 export function buildOrcidAuthorizeUrl(origin: string, state: string) {
@@ -40,6 +59,7 @@ export function buildOrcidAuthorizeUrl(origin: string, state: string) {
 export async function exchangeOrcidCode(code: string, origin: string) {
   const clientId = process.env.ORCID_CLIENT_ID;
   const clientSecret = process.env.ORCID_CLIENT_SECRET;
+  const redirectUri = getOrcidRedirectUri(origin);
 
   if (!clientId || !clientSecret) {
     throw new Error("ORCID OAuth credentials are not configured.");
@@ -50,7 +70,7 @@ export async function exchangeOrcidCode(code: string, origin: string) {
     client_secret: clientSecret,
     grant_type: "authorization_code",
     code,
-    redirect_uri: getOrcidRedirectUri(origin),
+    redirect_uri: redirectUri,
   });
 
   const response = await fetch(`${ORCID_BASE_URL}/oauth/token`, {
