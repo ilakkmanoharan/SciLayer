@@ -2,7 +2,13 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { jwtVerify } from "jose";
 
-const protectedPrefixes = ["/dashboard", "/submissions", "/reviews", "/settings", "/submit/github"];
+const protectedPrefixes = [
+  "/dashboard",
+  "/submissions",
+  "/settings",
+  "/submit/github",
+  "/reviewer/reviews",
+];
 
 function getSecret() {
   const secret = process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET;
@@ -42,5 +48,11 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/submissions/:path*", "/reviews/:path*", "/settings/:path*", "/submit/github"],
+  matcher: [
+    "/dashboard/:path*",
+    "/submissions/:path*",
+    "/settings/:path*",
+    "/submit/github",
+    "/reviewer/reviews/:path*",
+  ],
 };

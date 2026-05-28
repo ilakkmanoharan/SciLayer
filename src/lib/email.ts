@@ -5,7 +5,7 @@ export type ReviewerEmailInput = {
   field: string;
   subfield: string;
   tags: string[];
-  reviewLink: string;
+  dashboardUrl: string;
 };
 
 export function buildReviewerInvitationEmail(input: ReviewerEmailInput) {
@@ -20,9 +20,9 @@ Authors: ${input.authors.join(", ")}
 Classification: ${input.field} / ${input.subfield}
 Tags: ${input.tags.join(", ")}
 
-Please use the secure link below to accept, decline, or submit your review:
+Open your reviewer dashboard to accept or decline this invitation:
 
-${input.reviewLink}
+${input.dashboardUrl}
 
 Thank you,
 SciLayer Editorial System`,

@@ -20,6 +20,12 @@ export type DemoArticle = {
   journal?: string;
   classification: ReturnType<typeof classifyManuscript>;
   manuscriptMd: string;
+  supportingMaterials: {
+    coverLetter: string;
+    supplementary: { name: string; description: string }[];
+    figures: { name: string; caption: string }[];
+    referencesNote: string;
+  };
   versions: {
     version: number;
     commit: string;
@@ -67,6 +73,29 @@ This preprint introduces a modular architecture for autonomous scientific reason
 ## Contribution
 
 The article demonstrates the SciLayer v0.1 publication path from GitHub submission to validated preprint.`,
+    supportingMaterials: {
+      coverLetter: `Dear Editor,
+
+Please consider this manuscript for review in SciLayer Systems. We introduce an adaptive scientific reasoning architecture for intervention planning and evidence synthesis.
+
+Sincerely,
+Ilakkuvaselvi Manoharan`,
+      supplementary: [
+        {
+          name: "appendix.md",
+          description: "Extended methods and ablation study notes.",
+        },
+        {
+          name: "data-description.md",
+          description: "Dataset provenance and preprocessing steps.",
+        },
+      ],
+      figures: [
+        { name: "figure1.png", caption: "System architecture overview." },
+        { name: "figure2.png", caption: "Intervention planning workflow." },
+      ],
+      referencesNote: "references.bib — 42 cited works included in the submission package.",
+    },
     versions: [
       {
         version: 1,
@@ -105,6 +134,26 @@ The article demonstrates the SciLayer v0.1 publication path from GitHub submissi
     manuscriptMd: `# Semantic Scholarship Graph for Open Review
 
 This manuscript is in review and demonstrates versioned preprint history.`,
+    supportingMaterials: {
+      coverLetter: `Dear Editor,
+
+We submit this manuscript on semantic scholarship graphs for open review routing and discovery.
+
+Sincerely,
+Maya Chen`,
+      supplementary: [
+        {
+          name: "appendix.md",
+          description: "Additional graph schema and query examples.",
+        },
+        {
+          name: "reviewer-notes.md",
+          description: "Summary of prior related work in semantic search.",
+        },
+      ],
+      figures: [{ name: "figure1.png", caption: "Scholarly graph schema diagram." }],
+      referencesNote: "references.bib — 28 references provided.",
+    },
     versions: [
       {
         version: 1,

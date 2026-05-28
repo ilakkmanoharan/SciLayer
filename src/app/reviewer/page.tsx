@@ -1,34 +1,41 @@
-import Link from "next/link";
 import { PageShell } from "@/components/page-shell";
-import { demoArticles } from "@/lib/demo-data";
+import { ReviewerInvitationList } from "@/components/reviewer-invitation-list";
+import { getReviewerInvitations } from "@/lib/reviewer-invitations";
 
-const reviewActions = ["Accept invitation", "Decline", "Approve", "Request changes", "Reject"];
+export default async function ReviewerDashboardPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ invited?: string; declined?: string }>;
+}) {
+  const params = await searchParams;
+  const invitations = await getReviewerInvitations();
 
-export default function ReviewerDashboardPage() {
   return (
     <PageShell
       eyebrow="Reviewer dashboard"
       title="Review invitations"
-      description="Reviewers receive secure email links and can accept, decline, or submit recommendations from this workspace."
+      description="Accept invitations, then open the review workspace to read the manuscript, cover letter, and supplementary materials."
     >
-      <div className="grid gap-5">
-        {demoArticles.map((article) => (
-          <section key={article.slug} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <p className="text-sm font-bold uppercase tracking-wide text-cyan-700">Invited</p>
-            <h2 className="mt-2 text-2xl font-black text-slate-950">
-              <Link href={`/articles/${article.slug}`}>{article.title}</Link>
-            </h2>
-            <p className="mt-3 text-slate-600">{article.abstract}</p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {reviewActions.map((action) => (
-                <button key={action} className="rounded-full border border-slate-300 px-4 py-2 text-sm font-bold text-slate-800">
-                  {action}
-                </button>
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
+      {params?.invited ? (
+        <div className="mb-6 rounded-2xl border border-cyan-200 bg-cyan-50 p-4 text-sm text-cyan-950">
+          <p className="font-bold">New review invitation</p>
+          <p className="mt-1">
+            You were invited to review a manuscript. Accept the invitation below to open the
+            full review workspace.
+          </p>
+        </div>
+      ) : null}
+
+      {params?.declined ? (
+        <div className="mb-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
+          Invitation declined. You can still review other assignments below.
+        </div>
+      ) : null}
+
+      <ReviewerInvitationList
+        invitations={invitations}
+        highlightSlug={params?.invited}
+      />
     </PageShell>
   );
 }

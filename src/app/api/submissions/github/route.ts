@@ -3,6 +3,7 @@ import { getSession } from "@/lib/auth/session";
 import { classifyManuscript } from "@/lib/classification";
 import { buildReviewerInvitationEmail } from "@/lib/email";
 import { awardPoints } from "@/lib/points";
+import { buildInvitationUrls } from "@/lib/reviewer-invitations";
 import {
   slugifyTitle,
   validateGithubSubmission,
@@ -38,6 +39,8 @@ export async function POST(request: NextRequest) {
     "figures/",
     "supplementary/",
   ]);
+  const slug = slugifyTitle(title);
+  const invitationUrls = buildInvitationUrls(request.nextUrl.origin, slug);
   const reviewerEmailPreview = buildReviewerInvitationEmail({
     reviewerName: "Reviewer",
     articleTitle: title,
@@ -45,13 +48,14 @@ export async function POST(request: NextRequest) {
     field: classification.field,
     subfield: classification.subfield,
     tags: classification.tags,
-    reviewLink: "https://scilayer.example/reviewer/invitations/demo-token",
+    dashboardUrl: invitationUrls.dashboardUrl,
   });
 
   return NextResponse.json({
+    invitationUrls,
     article: {
       title,
-      slug: slugifyTitle(title),
+      slug,
       status: validation.valid ? "validated" : "validation_failed",
       githubUrl: parsed.data.githubUrl,
     },

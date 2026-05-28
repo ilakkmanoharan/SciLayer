@@ -26,6 +26,11 @@ type SubmissionResult = {
     subject: string;
     body: string;
   };
+  invitationUrls: {
+    landingUrl: string;
+    dashboardUrl: string;
+    reviewUrl: string;
+  };
 };
 
 export function GithubSubmissionForm() {
@@ -169,11 +174,23 @@ export function GithubSubmissionForm() {
             <div className="rounded-2xl bg-cyan-50 p-4 text-sm text-cyan-900">
               Awarded +{result.pointsEvent.points} points for a valid manuscript submission.
             </div>
-            <pre className="rounded-2xl bg-slate-950 p-4 text-xs leading-5 text-slate-50">
-              {result.reviewerEmailPreview.subject}
-              {"\n\n"}
-              {result.reviewerEmailPreview.body}
-            </pre>
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+              <p className="text-sm font-bold text-slate-950">
+                {result.reviewerEmailPreview.subject}
+              </p>
+              <pre className="mt-3 whitespace-pre-wrap text-xs leading-5 text-slate-700">
+                {result.reviewerEmailPreview.body}
+              </pre>
+              <a
+                href={result.invitationUrls.dashboardUrl}
+                className="mt-5 inline-flex rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white hover:bg-slate-800"
+              >
+                Open reviewer dashboard
+              </a>
+              <p className="mt-3 text-xs text-slate-500">
+                Invitation link: {result.invitationUrls.landingUrl}
+              </p>
+            </div>
           </div>
         )}
       </section>
