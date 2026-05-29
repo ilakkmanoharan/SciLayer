@@ -1,38 +1,36 @@
 import { cookies } from "next/headers";
-import { demoArticles, getArticle } from "@/lib/demo-data";
+import { listAllSubmissions } from "@/lib/submissions/store";
 import { getAppOrigin } from "@/lib/orcid";
 
 export type InvitationStatus = "invited" | "accepted" | "declined";
 
 const COOKIE_PREFIX = "scilayer_invite_";
 
-export function invitationTokenForSlug(slug: string) {
-  return `inv-${slug}`;
+export function invitationTokenForSubmission(submissionId: string) {
+  return `inv-${submissionId}`;
 }
 
-export function slugFromInvitationToken(token: string): string | null {
+export function submissionIdFromInvitationToken(token: string): string | null {
   if (!token.startsWith("inv-")) {
     return null;
   }
-
-  const slug = token.slice(4);
-  return getArticle(slug) ? slug : null;
+  return token.slice(4);
 }
 
-export function buildInvitationUrls(origin: string, slug: string) {
+export function buildInvitationUrls(origin: string, submissionId: string) {
   const base = getAppOrigin(origin);
-  const token = invitationTokenForSlug(slug);
+  const token = invitationTokenForSubmission(submissionId);
 
   return {
-      landingUrl: `${base}/reviewer/invitations/${token}`,
-      dashboardUrl: `${base}/reviewer?invited=${encodeURIComponent(slug)}`,
-      reviewUrl: `${base}/reviewer/reviews/${slug}`,
-    };
+    landingUrl: `${base}/reviewer/invitations/${token}`,
+    dashboardUrl: `${base}/reviewer?invited=${encodeURIComponent(submissionId)}`,
+    reviewUrl: `${base}/reviewer/reviews/${submissionId}`,
+  };
 }
 
-export async function getInvitationStatus(slug: string): Promise<InvitationStatus> {
+export async function getInvitationStatus(submissionId: string): Promise<InvitationStatus> {
   const store = await cookies();
-  const value = store.get(`${COOKIE_PREFIX}${slug}`)?.value;
+  const value = store.get(`${COOKIE_PREFIX}${submissionId}`)?.value;
 
   if (value === "accepted" || value === "declined") {
     return value;
@@ -41,9 +39,12 @@ export async function getInvitationStatus(slug: string): Promise<InvitationStatu
   return "invited";
 }
 
-export async function setInvitationStatus(slug: string, status: "accepted" | "declined") {
+export async function setInvitationStatus(
+  submissionId: string,
+  status: "accepted" | "declined",
+) {
   const store = await cookies();
-  store.set(`${COOKIE_PREFIX}${slug}`, status, {
+  store.set(`${COOKIE_PREFIX}${submissionId}`, status, {
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
@@ -53,14 +54,18 @@ export async function setInvitationStatus(slug: string, status: "accepted" | "de
 }
 
 export async function getReviewerInvitations() {
+  const submissions = await listAllSubmissions();
+
   return Promise.all(
-    demoArticles.map(async (article) => ({
-      slug: article.slug,
-      token: invitationTokenForSlug(article.slug),
-      title: article.title,
-      abstract: article.abstract,
-      authors: article.authors.map((author) => author.name).join(", "),
-      status: await getInvitationStatus(article.slug),
+    submissions.map(async (submission) => ({
+      submissionId: submission.id,
+      slug: submission.slug,
+      token: invitationTokenForSubmission(submission.id),
+      title: submission.title,
+      abstract: submission.abstract,
+      authors: submission.authorName,
+      articleType: submission.articleType,
+      status: await getInvitationStatus(submission.id),
     })),
   );
 }

@@ -6,7 +6,6 @@ const protectedPrefixes = [
   "/dashboard",
   "/submissions",
   "/settings",
-  "/submit/github",
   "/reviewer/reviews",
 ];
 
@@ -52,7 +51,7 @@ export const config = {
     "/dashboard/:path*",
     "/submissions/:path*",
     "/settings/:path*",
-    "/submit/github",
+    "/submissions/upload",
     "/reviewer/reviews/:path*",
   ],
 };

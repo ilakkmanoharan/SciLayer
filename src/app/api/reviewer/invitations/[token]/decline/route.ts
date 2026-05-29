@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
   setInvitationStatus,
-  slugFromInvitationToken,
+  submissionIdFromInvitationToken,
 } from "@/lib/reviewer-invitations";
 
 export async function POST(
@@ -9,13 +9,13 @@ export async function POST(
   context: { params: Promise<{ token: string }> },
 ) {
   const { token } = await context.params;
-  const slug = slugFromInvitationToken(token);
+  const submissionId = submissionIdFromInvitationToken(token);
 
-  if (!slug) {
+  if (!submissionId) {
     return NextResponse.json({ error: "Invalid invitation." }, { status: 404 });
   }
 
-  await setInvitationStatus(slug, "declined");
+  await setInvitationStatus(submissionId, "declined");
 
   return NextResponse.redirect(new URL("/reviewer?declined=1", request.url));
 }

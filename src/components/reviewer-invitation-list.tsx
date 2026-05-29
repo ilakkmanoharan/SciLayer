@@ -3,22 +3,35 @@
 import { useRouter } from "next/navigation";
 
 export type ReviewerInvitationItem = {
+  submissionId: string;
   slug: string;
   token: string;
   title: string;
   abstract: string;
   authors: string;
+  articleType: string;
   status: "invited" | "accepted" | "declined";
 };
 
 export function ReviewerInvitationList({
   invitations,
-  highlightSlug,
+  highlightId,
 }: {
   invitations: ReviewerInvitationItem[];
-  highlightSlug?: string;
+  highlightId?: string;
 }) {
   const router = useRouter();
+
+  if (!invitations.length) {
+    return (
+      <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm">
+        <p className="text-slate-600">No manuscript submissions yet. Upload a paper to begin review.</p>
+        <a href="/submissions/upload" className="mt-4 inline-flex font-bold text-cyan-700 hover:underline">
+          Submit a manuscript
+        </a>
+      </div>
+    );
+  }
 
   async function handleAction(
     invitation: ReviewerInvitationItem,
@@ -29,7 +42,7 @@ export function ReviewerInvitationList({
     });
 
     if (action === "accept") {
-      router.push(`/reviewer/reviews/${invitation.slug}`);
+      router.push(`/reviewer/reviews/${invitation.submissionId}`);
       return;
     }
 
@@ -40,11 +53,11 @@ export function ReviewerInvitationList({
   return (
     <div className="grid gap-5">
       {invitations.map((invitation) => {
-        const isHighlighted = highlightSlug === invitation.slug;
+        const isHighlighted = highlightId === invitation.submissionId;
 
         return (
           <section
-            key={invitation.slug}
+            key={invitation.submissionId}
             className={`rounded-3xl border bg-white p-6 shadow-sm ${
               isHighlighted ? "border-cyan-400 ring-2 ring-cyan-100" : "border-slate-200"
             }`}
@@ -60,7 +73,8 @@ export function ReviewerInvitationList({
                 ? "Invited"
                 : invitation.status === "accepted"
                   ? "Accepted"
-                  : "Declined"}
+                  : "Declined"}{" "}
+              · {invitation.articleType}
             </p>
             <h2 className="mt-2 text-2xl font-black text-slate-950">{invitation.title}</h2>
             <p className="mt-1 text-sm text-slate-500">Authors: {invitation.authors}</p>
@@ -86,7 +100,7 @@ export function ReviewerInvitationList({
             ) : invitation.status === "accepted" ? (
               <button
                 type="button"
-                onClick={() => router.push(`/reviewer/reviews/${invitation.slug}`)}
+                onClick={() => router.push(`/reviewer/reviews/${invitation.submissionId}`)}
                 className="mt-5 rounded-full bg-cyan-600 px-4 py-2 text-sm font-bold text-white hover:bg-cyan-700"
               >
                 Open review workspace

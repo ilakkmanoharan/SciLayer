@@ -61,3 +61,6 @@ Thumbs.db
 !.vscode/extensions.json
 !.vscode/settings.json
 .vercel
+
+# Local submission uploads (archived to GitHub in production)
+data/
