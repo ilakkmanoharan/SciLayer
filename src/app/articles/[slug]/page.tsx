@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { StatusBadge } from "@/components/status-badge";
 import { getAllArticleSlugs, getArticle } from "@/lib/demo-data";
+import { ManuscriptProse } from "@/components/manuscript-prose";
 import { renderMarkdown } from "@/lib/markdown";
 
 export async function generateStaticParams() {
@@ -20,11 +21,13 @@ export default async function ArticlePage({
     notFound();
   }
 
-  const renderedHtml = await renderMarkdown(article.manuscriptMd);
+  const renderedHtml = await renderMarkdown(article.manuscriptMd, {
+    title: article.title,
+  });
 
   return (
-    <main className="mx-auto grid max-w-7xl gap-8 px-6 py-10 lg:grid-cols-[1fr_22rem]">
-      <article className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+    <main className="mx-auto grid max-w-7xl gap-8 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_20rem]">
+      <article className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm lg:p-10">
         <StatusBadge status={article.status} />
         <h1 className="mt-4 text-4xl font-black tracking-tight text-slate-950">{article.title}</h1>
         <p className="mt-4 text-lg leading-8 text-slate-600">{article.abstract}</p>
@@ -39,10 +42,7 @@ export default async function ArticlePage({
             {article.publishedAt ? ` · Published ${article.publishedAt}` : null}
           </span>
         </div>
-        <div
-          className="prose prose-slate mt-10 max-w-none"
-          dangerouslySetInnerHTML={{ __html: renderedHtml }}
-        />
+        <ManuscriptProse html={renderedHtml} />
       </article>
 
       <aside className="space-y-5">

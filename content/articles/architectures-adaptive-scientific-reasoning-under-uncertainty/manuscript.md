@@ -10,7 +10,16 @@ Taken together, these works point toward adaptive scientific reasoning systems o
 
 ## Keywords
 
-adaptive scientific reasoning; world models; causal inference; intervention learning; model-based reinforcement learning; active inference; perturbation biology; scientific intelligence; action semantics; uncertainty-aware experimentation
+- adaptive scientific reasoning
+- world models
+- causal inference
+- intervention learning
+- model-based reinforcement learning
+- active inference
+- perturbation biology
+- scientific intelligence
+- action semantics
+- uncertainty-aware experimentation
 
 ## 1. Introduction
 
