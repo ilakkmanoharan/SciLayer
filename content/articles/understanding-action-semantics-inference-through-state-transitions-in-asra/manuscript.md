@@ -654,4 +654,12 @@ The transition from `0` to `1` at top-center was not just a color change. It was
 
 ---
 
+## Reference notebook (GitHub)
+
+Hands-on companion for the transition-centric loop in this guide:
+
+- [ASRA v0.1 — Phase 1 ARC-AGI-3 (companion notebook)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra_v0_1_phase1_arc_agi3_notebook.ipynb) — see also the [full notebook folder](https://github.com/ilakkmanoharan/asra/tree/main/kaggle-notebooks).
+
+---
+
 *Related: ASRA Adaptive Scientific Reasoning Architecture · ARC-AGI-3 · Decision Biology · [Conceptual review](https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty) · [ASRA Phase 1](https://sci-layer.vercel.app/articles/transition-centric-adaptive-reasoning-asra-phase-1) · Nature Foundation Models · [Video](https://youtu.be/VmQygZPgK5A)*

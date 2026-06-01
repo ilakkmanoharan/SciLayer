@@ -61,8 +61,38 @@ export default async function ArticlePage({
             </div>
             <div>
               <dt className="font-bold">GitHub source</dt>
-              <dd className="break-words">{article.githubUrl}</dd>
+              <dd className="break-words">
+                <a
+                  href={article.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-cyan-700 hover:underline"
+                >
+                  {article.githubUrl}
+                </a>
+              </dd>
             </div>
+            {article.repositoryLinks?.length ? (
+              <div>
+                <dt className="font-bold">Kaggle notebooks</dt>
+                <dd>
+                  <ul className="mt-1 space-y-2">
+                    {article.repositoryLinks.map((link) => (
+                      <li key={link.href}>
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-cyan-700 hover:underline"
+                        >
+                          {link.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            ) : null}
             <div>
               <dt className="font-bold">Engagement</dt>
               <dd>

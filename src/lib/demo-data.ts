@@ -15,6 +15,7 @@ export type DemoArticle = {
   version: number;
   license: string;
   githubUrl: string;
+  repositoryLinks?: { label: string; href: string }[];
   publishedAt?: string;
   views: number;
   downloads: number;

@@ -14,6 +14,7 @@ type ArticleMetadata = {
   status: DemoArticle["status"];
   license: string;
   githubUrl: string;
+  repositoryLinks?: { label: string; href: string }[];
   journal?: string;
   publishedAt?: string;
   views: number;
@@ -64,6 +65,7 @@ function loadArticleFromDir(dirName: string): DemoArticle | null {
     version: meta.version,
     license: meta.license,
     githubUrl: meta.githubUrl,
+    repositoryLinks: meta.repositoryLinks,
     publishedAt: meta.publishedAt,
     views: meta.views,
     downloads: meta.downloads,
