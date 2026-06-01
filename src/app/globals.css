@@ -25,6 +25,7 @@ a {
   --tw-prose-links: #0e7490;
   --tw-prose-bold: #0f172a;
   --tw-prose-code: #0f172a;
+  --tw-prose-pre-code: #0f172a;
   --tw-prose-pre-bg: #f1f5f9;
   line-height: 1.75;
 }
@@ -91,17 +92,21 @@ a {
   padding: 1.15rem 1.25rem;
   overflow-x: auto;
   border-radius: 0.75rem;
-  border: 1px solid #e2e8f0;
-  background: #f8fafc !important;
-  font-size: 0.875rem;
-  line-height: 1.65;
+  border: 1px solid #cbd5e1;
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  font-weight: 500;
 }
 
 .manuscript-prose pre code {
   background: transparent !important;
   padding: 0;
   font-size: inherit;
+  font-weight: inherit;
   border: none;
+  color: #0f172a !important;
 }
 
 .manuscript-prose :not(pre) > code {
@@ -110,7 +115,8 @@ a {
   background: #f1f5f9;
   border: 1px solid #e2e8f0;
   font-size: 0.9em;
-  font-weight: 500;
+  font-weight: 600;
+  color: #0f172a !important;
 }
 
 .manuscript-prose table {
@@ -154,11 +160,17 @@ a {
   margin: 1.5rem 0;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0.25rem 0;
+  padding: 0.5rem 0;
+  color: #0f172a;
 }
 
 .manuscript-prose .katex {
-  font-size: 1.05em;
+  font-size: 1.08em;
+  color: #0f172a !important;
+}
+
+.manuscript-prose .katex * {
+  color: inherit;
 }
 
 .manuscript-prose img {
