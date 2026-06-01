@@ -209,9 +209,9 @@ Phase 1 reference notebooks (evolution toward the competition pipeline) are in t
 
 1. Chollet, F. On the Measure of Intelligence. *arXiv* (2019).  
 2. ARC Prize Foundation. ARC-AGI-3 documentation. https://docs.arcprize.org  
-3. Manoharan, I. ASRA: Adaptive Scientific Reasoning Architecture. https://github.com/ilakkmanoharan/asra  
-4. Manoharan, I. Understanding Action Semantics Inference Through State Transitions in ASRA. https://sci-layer.vercel.app/articles/understanding-action-semantics-inference-through-state-transitions-in-asra  
-5. Manoharan, I. Architectures for Adaptive Scientific Reasoning Under Uncertainty. https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty
+3. Ilakkuvaselvi Manoharan ASRA: Adaptive Scientific Reasoning Architecture. https://github.com/ilakkmanoharan/asra  
+4. Ilakkuvaselvi Manoharan Understanding Action Semantics Inference Through State Transitions in ASRA. https://sci-layer.vercel.app/articles/understanding-action-semantics-inference-through-state-transitions-in-asra  
+5. Ilakkuvaselvi Manoharan Architectures for Adaptive Scientific Reasoning Under Uncertainty. https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty
 
 ---
 

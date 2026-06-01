@@ -277,10 +277,10 @@ Interactive companion with compact object-scene hints:
 ## References
 
 1. Chollet, F. On the Measure of Intelligence. *arXiv* (2019).  
-2. Manoharan, I. Transition-Centric Adaptive Reasoning: ASRA Phase 1 for Interactive Environments. https://sci-layer.vercel.app/articles/transition-centric-adaptive-reasoning-asra-phase-1  
-3. Manoharan, I. Understanding Action Semantics Inference Through State Transitions in ASRA. https://sci-layer.vercel.app/articles/understanding-action-semantics-inference-through-state-transitions-in-asra  
-4. Manoharan, I. Architectures for Adaptive Scientific Reasoning Under Uncertainty. https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty  
-5. Manoharan, I. ASRA: Adaptive Scientific Reasoning Architecture. https://github.com/ilakkmanoharan/asra  
+2. Ilakkuvaselvi Manoharan Transition-Centric Adaptive Reasoning: ASRA Phase 1 for Interactive Environments. https://sci-layer.vercel.app/articles/transition-centric-adaptive-reasoning-asra-phase-1  
+3. Ilakkuvaselvi Manoharan Understanding Action Semantics Inference Through State Transitions in ASRA. https://sci-layer.vercel.app/articles/understanding-action-semantics-inference-through-state-transitions-in-asra  
+4. Ilakkuvaselvi Manoharan Architectures for Adaptive Scientific Reasoning Under Uncertainty. https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty  
+5. Ilakkuvaselvi Manoharan ASRA: Adaptive Scientific Reasoning Architecture. https://github.com/ilakkmanoharan/asra  
 6. Phase 2 perception implementation — https://github.com/ilakkmanoharan/asra/tree/main/asra-arc/src/asra/perception
 
 ---

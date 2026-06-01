@@ -350,10 +350,10 @@ Reference implementations for this paper are maintained in the [ASRA `kaggle-not
 
 1. Chollet, F. On the Measure of Intelligence. *arXiv* (2019).  
 2. ARC Prize Foundation. ARC-AGI-3 documentation. https://docs.arcprize.org  
-3. Manoharan, I. ASRA: Adaptive Scientific Reasoning Architecture. https://github.com/ilakkmanoharan/asra  
-4. Manoharan, I. Understanding Action Semantics Inference Through State Transitions in ASRA. https://sci-layer.vercel.app/articles/understanding-action-semantics-inference-through-state-transitions-in-asra  
-5. Manoharan, I. Architectures for Adaptive Scientific Reasoning Under Uncertainty. https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty  
-6. Manoharan, I. Transition-Centric Adaptive Reasoning: ASRA Phase 1 (Version 1). https://sci-layer.vercel.app/articles/transition-centric-adaptive-reasoning-asra-phase-1 (version history)  
+3. Ilakkuvaselvi Manoharan ASRA: Adaptive Scientific Reasoning Architecture. https://github.com/ilakkmanoharan/asra  
+4. Ilakkuvaselvi Manoharan Understanding Action Semantics Inference Through State Transitions in ASRA. https://sci-layer.vercel.app/articles/understanding-action-semantics-inference-through-state-transitions-in-asra  
+5. Ilakkuvaselvi Manoharan Architectures for Adaptive Scientific Reasoning Under Uncertainty. https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty  
+6. Ilakkuvaselvi Manoharan Transition-Centric Adaptive Reasoning: ASRA Phase 1 (Version 1). https://sci-layer.vercel.app/articles/transition-centric-adaptive-reasoning-asra-phase-1 (version history)  
 7. ARC Prize Foundation / Kaggle. ARC Prize 2026 — ARC-AGI-3 code competition discussion on submission mechanics (validation gate vs. API scoring).
 
 ---
