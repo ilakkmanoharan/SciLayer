@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { StatusBadge } from "@/components/status-badge";
-import { getArticle } from "@/lib/demo-data";
+import { getAllArticleSlugs, getArticle } from "@/lib/demo-data";
 import { renderMarkdown } from "@/lib/markdown";
 
 export async function generateStaticParams() {
-  return [];
+  return getAllArticleSlugs().map((slug) => ({ slug }));
 }
 
 export default async function ArticlePage({
@@ -34,6 +34,10 @@ export default async function ArticlePage({
               {author.name}
             </Link>
           ))}
+          <span className="mt-2 block text-slate-500">
+            Version {article.version}
+            {article.publishedAt ? ` · Published ${article.publishedAt}` : null}
+          </span>
         </div>
         <div
           className="prose prose-slate mt-10 max-w-none"

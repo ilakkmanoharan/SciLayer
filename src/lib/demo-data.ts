@@ -1,4 +1,5 @@
 import { classifyManuscript } from "@/lib/classification";
+import { loadPublishedArticles } from "@/lib/published-articles";
 
 export type DemoArticle = {
   slug: string;
@@ -34,77 +35,8 @@ export type DemoArticle = {
   }[];
 };
 
-export const demoArticles: DemoArticle[] = [
-  {
-    slug: "adaptive-scientific-reasoning-architecture",
-    title: "Adaptive Scientific Reasoning Architecture",
-    abstract:
-      "This preprint introduces a modular architecture for autonomous scientific reasoning, intervention planning, and evidence synthesis across evolving research domains.",
-    authors: [
-      {
-        name: "Ilakkuvaselvi Manoharan",
-        orcid: "0000-0000-0000-0000",
-        affiliation: "Independent Researcher",
-      },
-    ],
-    status: "published_preprint",
-    articleType: "preprint",
-    version: 1,
-    license: "CC-BY-4.0",
-    githubUrl: "https://github.com/scilayer/submissions/pull/1",
-    publishedAt: "2026-05-26",
-    views: 128,
-    downloads: 34,
-    journal: "SciLayer Systems",
-    classification: classifyManuscript({
-      title: "Adaptive Scientific Reasoning Architecture",
-      abstract:
-        "Autonomous agents combine world models, scientific AI, and intervention learning for discovery.",
-      keywords: ["adaptive reasoning", "scientific discovery", "world models"],
-    }),
-    manuscriptMd: `# Adaptive Scientific Reasoning Architecture
-
-SciLayer renders accepted Markdown manuscripts as public scholarly articles.
-
-## Abstract
-
-This preprint introduces a modular architecture for autonomous scientific reasoning, intervention planning, and evidence synthesis across evolving research domains.
-
-## Contribution
-
-The article demonstrates the SciLayer v0.1 publication path from GitHub submission to validated preprint.`,
-    supportingMaterials: {
-      coverLetter: `Dear Editor,
-
-Please consider this manuscript for review in SciLayer Systems. We introduce an adaptive scientific reasoning architecture for intervention planning and evidence synthesis.
-
-Sincerely,
-Ilakkuvaselvi Manoharan`,
-      supplementary: [
-        {
-          name: "appendix.md",
-          description: "Extended methods and ablation study notes.",
-        },
-        {
-          name: "data-description.md",
-          description: "Dataset provenance and preprocessing steps.",
-        },
-      ],
-      figures: [
-        { name: "figure1.png", caption: "System architecture overview." },
-        { name: "figure2.png", caption: "Intervention planning workflow." },
-      ],
-      referencesNote: "references.bib — 42 cited works included in the submission package.",
-    },
-    versions: [
-      {
-        version: 1,
-        commit: "8a7f2d1",
-        createdAt: "2026-05-26",
-        summary: "Initial validated preprint publication.",
-      },
-    ],
-  },
+/** Demo-only articles (not in content/articles). Ilakkuvaselvi Manoharan papers live under content/articles/. */
+const demoOnlyArticles: DemoArticle[] = [
   {
     slug: "semantic-scholarship-graph-for-open-review",
     title: "Semantic Scholarship Graph for Open Review",
@@ -171,6 +103,8 @@ Maya Chen`,
   },
 ];
 
+export const demoArticles: DemoArticle[] = [...loadPublishedArticles(), ...demoOnlyArticles];
+
 export const demoJournals = [
   {
     name: "SciLayer Systems",
@@ -188,6 +122,10 @@ export const demoJournals = [
 
 export function getArticle(slug: string) {
   return demoArticles.find((article) => article.slug === slug);
+}
+
+export function getAllArticleSlugs() {
+  return demoArticles.map((article) => article.slug);
 }
 
 export function getJournal(slug: string) {
