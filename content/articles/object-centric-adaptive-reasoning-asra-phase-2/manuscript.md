@@ -266,14 +266,23 @@ The Phase 2 interactive extension is not a new agent philosophy; it is the same 
 
 ---
 
-## References (conceptual)
+## Reference notebook (GitHub)
 
-- Chollet, F. — *On the Measure of Intelligence* / Abstraction and Reasoning Corpus  
-- ASRA roadmap — `ASRA-roadmap-datasets.md` (Phase 2: abstraction and symbolic reasoning)  
-- Phase 1 article — transition-centric adaptive reasoning (Experience Engine)  
-- Phase 2 implementation — `asra-arc/src/asra/perception/`  
-- Phase 2 evaluation — `asra-arc/data/analysis/phase2/PHASE2_EVALUATION_REPORT.md`
+Interactive companion with compact object-scene hints:
+
+- [ASRA Phase 2 — ARC Prize 2026 (companion notebook)](https://github.com/ilakkmanoharan/SciLayer/blob/main/content/kaggle-notebooks/asra-phase-2-arc-prize-2026.ipynb)
 
 ---
 
-*Companion notebook: `asra-phase-2-arc-prize-2026.ipynb` (interactive agent with compact object-scene hints). This document is the conceptual layer; implementation details live in the library and analysis reports.*
+## References
+
+1. Chollet, F. On the Measure of Intelligence. *arXiv* (2019).  
+2. Manoharan, I. Transition-Centric Adaptive Reasoning: ASRA Phase 1 for Interactive Environments. https://sci-layer.vercel.app/articles/transition-centric-adaptive-reasoning-asra-phase-1  
+3. Manoharan, I. Understanding Action Semantics Inference Through State Transitions in ASRA. https://sci-layer.vercel.app/articles/understanding-action-semantics-inference-through-state-transitions-in-asra  
+4. Manoharan, I. Architectures for Adaptive Scientific Reasoning Under Uncertainty. https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty  
+5. Manoharan, I. ASRA: Adaptive Scientific Reasoning Architecture. https://github.com/ilakkmanoharan/asra  
+6. Phase 2 perception implementation — https://github.com/ilakkmanoharan/asra/tree/main/asra-arc/src/asra/perception
+
+---
+
+*Correspondence: ilakkmanoharan@gmail.com*
