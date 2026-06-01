@@ -337,12 +337,12 @@ The architecture remains modest so each component can be audited and extended. T
 
 ## Reference notebooks (GitHub)
 
-Reference implementations for this paper are maintained in the [ASRA `kaggle-notebooks` folder](https://github.com/ilakkmanoharan/asra/tree/main/kaggle-notebooks):
+Reference implementations for this paper are maintained in the [ASRA `kaggle-notebooks` folder](https://github.com/ilakkmanoharan/SciLayer/tree/main/content/kaggle-notebooks):
 
-- [ASRA Phase 1 — ARC Prize 2026 (v11.4 reference notebook)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra-phase-1-arc-prize-2026-v4-fixed.ipynb)
-- [ASRA v0.3 — Kaggle submission notebook](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra_v0_3_kaggle_submission.ipynb)
-- [ASRA v0.2 — Phase 1 ARC-AGI-3 (Kaggle-ready)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra_v0_2_phase1_arc_agi3_notebook.ipynb)
-- [ASRA v0.1 — Phase 1 ARC-AGI-3 (introductory)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra_v0_1_phase1_arc_agi3_notebook.ipynb)
+- [ASRA Phase 1 — ARC Prize 2026 (v11.4 reference notebook)](https://github.com/ilakkmanoharan/SciLayer/blob/main/content/kaggle-notebooks/asra-phase-1-arc-prize-2026-v4-fixed.ipynb)
+- [ASRA v0.3 — Kaggle submission notebook](https://github.com/ilakkmanoharan/SciLayer/blob/main/content/kaggle-notebooks/asra_v0_3_kaggle_submission.ipynb)
+- [ASRA v0.2 — Phase 1 ARC-AGI-3 (Kaggle-ready)](https://github.com/ilakkmanoharan/SciLayer/blob/main/content/kaggle-notebooks/asra_v0_2_phase1_arc_agi3_notebook.ipynb)
+- [ASRA v0.1 — Phase 1 ARC-AGI-3 (introductory)](https://github.com/ilakkmanoharan/SciLayer/blob/main/content/kaggle-notebooks/asra_v0_1_phase1_arc_agi3_notebook.ipynb)
 
 ---
 

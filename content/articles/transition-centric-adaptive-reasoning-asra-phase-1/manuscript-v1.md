@@ -198,10 +198,10 @@ The real test is generalization in environments never seen during development. P
 
 ## Reference notebooks (GitHub)
 
-Phase 1 reference notebooks (evolution toward the competition pipeline) are in the [ASRA `kaggle-notebooks` folder](https://github.com/ilakkmanoharan/asra/tree/main/kaggle-notebooks):
+Phase 1 reference notebooks (evolution toward the competition pipeline) are in the [ASRA `kaggle-notebooks` folder](https://github.com/ilakkmanoharan/SciLayer/tree/main/content/kaggle-notebooks):
 
-- [ASRA v0.1 — Phase 1 ARC-AGI-3 (introductory)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra_v0_1_phase1_arc_agi3_notebook.ipynb)
-- [ASRA v0.2 — Phase 1 ARC-AGI-3 (Kaggle-ready)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra_v0_2_phase1_arc_agi3_notebook.ipynb)
+- [ASRA v0.1 — Phase 1 ARC-AGI-3 (introductory)](https://github.com/ilakkmanoharan/SciLayer/blob/main/content/kaggle-notebooks/asra_v0_1_phase1_arc_agi3_notebook.ipynb)
+- [ASRA v0.2 — Phase 1 ARC-AGI-3 (Kaggle-ready)](https://github.com/ilakkmanoharan/SciLayer/blob/main/content/kaggle-notebooks/asra_v0_2_phase1_arc_agi3_notebook.ipynb)
 
 ---
 

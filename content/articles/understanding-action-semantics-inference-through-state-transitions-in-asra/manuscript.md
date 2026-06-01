@@ -658,7 +658,7 @@ The transition from `0` to `1` at top-center was not just a color change. It was
 
 Hands-on companion for the transition-centric loop in this guide:
 
-- [ASRA v0.1 — Phase 1 ARC-AGI-3 (companion notebook)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra_v0_1_phase1_arc_agi3_notebook.ipynb) — see also the [full notebook folder](https://github.com/ilakkmanoharan/asra/tree/main/kaggle-notebooks).
+- [ASRA v0.1 — Phase 1 ARC-AGI-3 (companion notebook)](https://github.com/ilakkmanoharan/SciLayer/blob/main/content/kaggle-notebooks/asra_v0_1_phase1_arc_agi3_notebook.ipynb) — see also the [full notebook folder](https://github.com/ilakkmanoharan/SciLayer/tree/main/content/kaggle-notebooks).
 
 ---
 
