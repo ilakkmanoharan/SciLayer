@@ -718,7 +718,7 @@ Phase 3 is **research infrastructure first**, competition second.
 | `asra-v0.4-phase2` | Object-scene hints only |
 | `asra-v0.5-phase3` | + novelty/usefulness, visit memory, loop penalty (`CompactExplorationHints`) |
 
-**Kaggle notebook:** https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra-phase-3-arc-prize-2026.ipynb — compact subset (visit counts, frontier bonus, Phase 2 object hints) without shipping the full `asra-arc` library to the competition kernel.
+**Kaggle notebook:** https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/phase3/asra-phase-3-arc-prize-2026.ipynb — compact subset (visit counts, frontier bonus, Phase 2 object hints) without shipping the full `asra-arc` library to the competition kernel.
 
 ---
 
@@ -759,7 +759,7 @@ Phase 3 is **research infrastructure first**, competition second.
 
 ## Reference notebook (GitHub)
 
-- [ASRA Phase 3 — ARC Prize 2026 (ASRA repository)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra-phase-3-arc-prize-2026.ipynb)
+- [ASRA Phase 3 — ARC Prize 2026 (ASRA repository)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/phase3/asra-phase-3-arc-prize-2026.ipynb)
 
 ---
 

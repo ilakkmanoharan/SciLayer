@@ -387,7 +387,7 @@ Transition-centric adaptive reasoning remains the core; directed exploration is 
 
 Interactive companion with Phase 2 object-scene hints plus Phase 3 exploration memory:
 
-- [ASRA Phase 3 — ARC Prize 2026 (ASRA repository)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra-phase-3-arc-prize-2026.ipynb)
+- [ASRA Phase 3 — ARC Prize 2026 (ASRA repository)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/phase3/asra-phase-3-arc-prize-2026.ipynb)
 - [SciLayer archive copy](https://github.com/ilakkmanoharan/SciLayer/blob/main/content/kaggle-notebooks/asra-phase-3-arc-prize-2026.ipynb)
 
 ---

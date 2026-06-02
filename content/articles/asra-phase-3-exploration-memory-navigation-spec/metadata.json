@@ -10,7 +10,7 @@
   "repositoryLinks": [
     {
       "label": "ASRA Phase 3 — ARC Prize 2026 (companion notebook, ASRA repo)",
-      "href": "https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/asra-phase-3-arc-prize-2026.ipynb"
+      "href": "https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/phase3/asra-phase-3-arc-prize-2026.ipynb"
     },
     {
       "label": "Phase 3 exploration implementation (asra-arc)",

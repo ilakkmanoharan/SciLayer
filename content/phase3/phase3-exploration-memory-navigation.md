@@ -718,7 +718,7 @@ Phase 3 is **research infrastructure first**, competition second.
 | `asra-v0.4-phase2` | Object-scene hints only |
 | `asra-v0.5-phase3` (planned) | + novelty/usefulness, visit memory, optional strategy bias |
 
-A future **`kaggle-notebooks/phase3/`** notebook would embed a **compact** subset (visit counts + frontier bonus) — mirroring how Phase 2 embedded compact perception without the full `asra-arc` library on Kaggle.
+**Kaggle notebook:** https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/phase3/asra-phase-3-arc-prize-2026.ipynb — compact subset (visit counts, frontier bonus, Phase 2 object hints).
 
 ---
 

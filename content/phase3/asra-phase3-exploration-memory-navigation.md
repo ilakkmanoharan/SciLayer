@@ -395,4 +395,8 @@ Transition-centric adaptive reasoning remains the core; directed exploration is 
 
 ---
 
-*Companion notebook: [`asra-phase-3-arc-prize-2026.ipynb`](asra-phase-3-arc-prize-2026.ipynb) (interactive agent with object-scene + exploration memory hints). This document is the conceptual layer; module-level detail lives in the implementation reference and `asra-arc/src/asra/exploration/`.*
+## Reference notebook (GitHub)
+
+- [ASRA Phase 3 — ARC Prize 2026 (ASRA repository)](https://github.com/ilakkmanoharan/asra/blob/main/kaggle-notebooks/phase3/asra-phase-3-arc-prize-2026.ipynb)
+
+*This document is the conceptual layer; module-level detail lives in the implementation reference and `asra-arc/src/asra/exploration/`.*
