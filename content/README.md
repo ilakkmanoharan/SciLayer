@@ -5,9 +5,9 @@ Committed scholarly manuscripts served on the public site. Each article lives in
 - `metadata.json` — title, authors, ORCID, article type, version, status
 - `manuscript.md` (or `manuscript-v1.md`, `manuscript-v2.md`) — Markdown body
 
-`content/kaggle-notebooks/` — archived ASRA Kaggle notebooks linked from related articles (Phase 1–3; upstream: [asra/kaggle-notebooks](https://github.com/ilakkmanoharan/asra/tree/main/kaggle-notebooks)).
+`content/kaggle-notebooks/` — archived ASRA Kaggle notebooks linked from related articles (Phase 1–4; upstream: [asra/kaggle-notebooks](https://github.com/ilakkmanoharan/asra/tree/main/kaggle-notebooks)).
 
-`content/phase2/` and `content/phase3/` — source bundles for Phase 2 and Phase 3 research artifacts.
+`content/phase2/`, `content/phase3/`, and `content/phase4/` — source bundles for Phase 2–4 research artifacts.
 
 Source copies may also exist under `private/my-papers/`; the site reads from `content/articles/` only.
 
