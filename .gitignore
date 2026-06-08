@@ -64,3 +64,6 @@ Thumbs.db
 
 # Local submission uploads (archived to GitHub in production)
 data/
+
+# Large third-party PDFs (exceed GitHub 100MB limit; use arXiv links in articles)
+**/buchanan-pai-wang-ma-2606.06624.pdf
