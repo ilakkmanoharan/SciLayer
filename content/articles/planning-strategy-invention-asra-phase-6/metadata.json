@@ -25,6 +25,10 @@
       "href": "https://github.com/ilakkmanoharan/asra/tree/main/asra-arc/src/asra/planning"
     },
     {
+      "label": "ASRA Phase 7 preprint (Robustness & Generalization)",
+      "href": "https://sci-layer.vercel.app/articles/robustness-generalization-asra-phase-7"
+    },
+    {
       "label": "ASRA Phase 5 preprint (Goal Inference)",
       "href": "https://sci-layer.vercel.app/articles/goal-inference-hypothesis-ranking-asra-phase-5"
     },
