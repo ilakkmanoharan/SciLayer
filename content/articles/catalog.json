@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "description": "Conceptual groupings for SciLayer published articles. Slugs must match content/articles/{slug}/metadata.json.",
+  "collections": [
+    {
+      "id": "asra-foundations",
+      "title": "ASRA — Foundations & Theory",
+      "description": "Architecture-level concept papers and pedagogical primers that frame the Adaptive Scientific Reasoning program before phase-specific implementation.",
+      "order": 1,
+      "articles": [
+        "architectures-adaptive-scientific-reasoning-under-uncertainty",
+        "understanding-action-semantics-inference-through-state-transitions-in-asra",
+        "asra-for-decision-biology"
+      ]
+    },
+    {
+      "id": "asra-phases",
+      "title": "ASRA — Phase Preprints (ARC Prize 2026)",
+      "description": "Cumulative phase articles for the nine-layer ASRA stack: experience → observation → memory → causality → goals → planning → robustness → biology bridge → integration.",
+      "order": 2,
+      "articles": [
+        "transition-centric-adaptive-reasoning-asra-phase-1",
+        "object-centric-adaptive-reasoning-asra-phase-2",
+        "directed-exploration-episodic-memory-asra-phase-3",
+        "causal-action-semantics-asra-phase-4",
+        "goal-inference-hypothesis-ranking-asra-phase-5",
+        "planning-strategy-invention-asra-phase-6",
+        "robustness-generalization-asra-phase-7",
+        "decision-biology-bridge-asra-phase-8",
+        "final-submission-research-story-asra-phase-9"
+      ]
+    },
+    {
+      "id": "asra-specifications",
+      "title": "ASRA — Technical Specifications",
+      "description": "Implementation-oriented specs that complement phase concept papers with module boundaries, eval contracts, and deployment notes.",
+      "order": 3,
+      "articles": [
+        "asra-phase-3-exploration-memory-navigation-spec"
+      ]
+    },
+    {
+      "id": "comparative-analysis",
+      "title": "Comparative & Position Papers",
+      "description": "External framework comparisons and synthesis essays that situate ASRA relative to adjacent research programs.",
+      "order": 4,
+      "articles": [
+        "asra-vs-buchanan-mathematical-theory-of-memory"
+      ]
+    },
+    {
+      "id": "nature-foundation-models",
+      "title": "Nature Foundation Models",
+      "description": "Organizational and scientific framing for Nature Foundation Models research themes.",
+      "order": 5,
+      "articles": [
+        "nature-foundation-models-hierarchical-framework",
+        "atlas-gs-end-to-end-implementation"
+      ]
+    },
+    {
+      "id": "platform-essays",
+      "title": "Platform & Industry Essays",
+      "description": "Essays on ML platform evolution, tooling, and engineering practice outside the core ASRA arc.",
+      "order": 6,
+      "articles": [
+        "from-databricks-meets-pytorch-to-keras-ai-platform-evolution"
+      ]
+    }
+  ]
+}
