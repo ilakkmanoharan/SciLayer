@@ -29,6 +29,14 @@
       "href": "https://sci-layer.vercel.app/articles/asra-phase-3-exploration-memory-navigation-spec"
     },
     {
+      "label": "Evaluation Report v0",
+      "href": "https://sci-layer.vercel.app/articles/asra-arc-agi-3-evaluation-report-v0"
+    },
+    {
+      "label": "Gateway deployment spec",
+      "href": "https://sci-layer.vercel.app/articles/arc-agi-3-kaggle-gateway-deployment-spec"
+    },
+    {
       "label": "Architectures for Adaptive Scientific Reasoning (foundations)",
       "href": "https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty"
     }
