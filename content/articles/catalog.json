@@ -36,6 +36,7 @@
       "description": "Implementation-oriented specs that complement phase concept papers with module boundaries, eval contracts, and deployment notes.",
       "order": 3,
       "articles": [
+        "asra-integrated-architecture",
         "asra-phase-3-exploration-memory-navigation-spec"
       ]
     },

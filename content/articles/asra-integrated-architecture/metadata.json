@@ -1,0 +1,67 @@
+{
+  "slug": "asra-integrated-architecture",
+  "title": "ASRA Integrated Architecture — Nine-Layer Stack Reference",
+  "abstract": "Unified architecture reference for the Adaptive Scientific Reasoning Agent (ASRA): nine cognitive layers from experience logging through integration and submission, with read/write contracts, end-to-end data flow, storage schemas, deployment shapes, and links to Phase 1–9 SciLayer preprints.",
+  "articleType": "Article",
+  "version": 1,
+  "status": "published_preprint",
+  "license": "CC-BY-4.0",
+  "githubUrl": "https://github.com/ilakkmanoharan/asra",
+  "repositoryLinks": [
+    {
+      "label": "ASRA repository (integrated research library)",
+      "href": "https://github.com/ilakkmanoharan/asra"
+    },
+    {
+      "label": "ASRA Phase 1 preprint (Experience Engine)",
+      "href": "https://sci-layer.vercel.app/articles/transition-centric-adaptive-reasoning-asra-phase-1"
+    },
+    {
+      "label": "ASRA Phase 9 preprint (Integration & Final Submission)",
+      "href": "https://sci-layer.vercel.app/articles/final-submission-research-story-asra-phase-9"
+    },
+    {
+      "label": "Gateway notebook builder (Kaggle competition pattern)",
+      "href": "https://github.com/ilakkmanoharan/asra/tree/main/kaggle-notebooks/_shared"
+    },
+    {
+      "label": "Phase 3 technical specification",
+      "href": "https://sci-layer.vercel.app/articles/asra-phase-3-exploration-memory-navigation-spec"
+    },
+    {
+      "label": "Architectures for Adaptive Scientific Reasoning (foundations)",
+      "href": "https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty"
+    }
+  ],
+  "journal": "SciLayer Systems",
+  "publishedAt": "2026-05-28",
+  "views": 0,
+  "downloads": 0,
+  "keywords": [
+    "ASRA",
+    "architecture",
+    "integration",
+    "transition models",
+    "ARC Prize 2026",
+    "cognitive stack",
+    "Decision Biology",
+    "Kaggle gateway"
+  ],
+  "authors": [
+    {
+      "name": "Ilakkuvaselvi Manoharan",
+      "orcid": "0009-0008-8073-5416",
+      "affiliation": "Nature Foundation Models"
+    }
+  ],
+  "manuscriptFile": "manuscript.md",
+  "versions": [
+    {
+      "version": 1,
+      "manuscriptFile": "manuscript.md",
+      "commit": "content-v1",
+      "createdAt": "2026-05-28",
+      "summary": "Initial SciLayer publication: unified nine-layer ASRA stack reference with read/write table, data flow, and phase paper index."
+    }
+  ]
+}
