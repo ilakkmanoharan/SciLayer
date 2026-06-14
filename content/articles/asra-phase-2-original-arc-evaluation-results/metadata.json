@@ -1,0 +1,58 @@
+{
+  "slug": "asra-phase-2-original-arc-evaluation-results",
+  "title": "ASRA Phase 2 — Original ARC Full-Dataset Evaluation Results",
+  "abstract": "Empirical results for the ASRA Observation Engine on the Original ARC corpus (800 tasks): 100% rule-candidate coverage, ~98% cross-demo common-rule consistency, transform-event distributions, training vs evaluation complexity gradient, and branched-per-demo resolution for 17 exception tasks.",
+  "articleType": "Article",
+  "version": 1,
+  "status": "published_preprint",
+  "license": "CC-BY-4.0",
+  "githubUrl": "https://github.com/ilakkmanoharan/asra",
+  "repositoryLinks": [
+    {
+      "label": "Phase 2 evaluation data (asra-arc)",
+      "href": "https://github.com/ilakkmanoharan/asra/tree/main/asra-arc/data/analysis/phase2"
+    },
+    {
+      "label": "ASRA Phase 2 preprint (Object-Centric Reasoning)",
+      "href": "https://sci-layer.vercel.app/articles/object-centric-adaptive-reasoning-asra-phase-2"
+    },
+    {
+      "label": "ASRA Evaluation Report v0",
+      "href": "https://sci-layer.vercel.app/articles/asra-arc-agi-3-evaluation-report-v0"
+    },
+    {
+      "label": "Perception implementation (asra-arc)",
+      "href": "https://github.com/ilakkmanoharan/asra/tree/main/asra-arc/src/asra/perception"
+    }
+  ],
+  "journal": "SciLayer Systems",
+  "publishedAt": "2026-05-28",
+  "views": 0,
+  "downloads": 0,
+  "keywords": [
+    "ASRA",
+    "Phase 2",
+    "Original ARC",
+    "evaluation",
+    "object-centric",
+    "transform detection",
+    "rule candidates"
+  ],
+  "authors": [
+    {
+      "name": "Ilakkuvaselvi Manoharan",
+      "orcid": "0009-0008-8073-5416",
+      "affiliation": "Nature Foundation Models"
+    }
+  ],
+  "manuscriptFile": "manuscript.md",
+  "versions": [
+    {
+      "version": 1,
+      "manuscriptFile": "manuscript.md",
+      "commit": "content-v1",
+      "createdAt": "2026-05-28",
+      "summary": "Initial SciLayer publication: full-dataset Phase 2 perception metrics on 800 Original ARC tasks."
+    }
+  ]
+}

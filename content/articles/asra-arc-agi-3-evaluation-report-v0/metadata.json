@@ -1,0 +1,62 @@
+{
+  "slug": "asra-arc-agi-3-evaluation-report-v0",
+  "title": "ASRA Evaluation Report — ARC-AGI-3 & Phase Benchmarks (v0)",
+  "abstract": "Interim consolidated evaluation report for ASRA: three tracks (gateway plumbing, competition scores, repeated-run learning), Phase 1–2 Kaggle results, Phase 2 Original ARC benchmark summary, agent version ladder, and roadmap to v1 after Stage 1 gateway migration completes.",
+  "articleType": "Article",
+  "version": 0,
+  "status": "published_preprint",
+  "license": "CC-BY-4.0",
+  "githubUrl": "https://github.com/ilakkmanoharan/asra",
+  "repositoryLinks": [
+    {
+      "label": "ASRA repository",
+      "href": "https://github.com/ilakkmanoharan/asra"
+    },
+    {
+      "label": "Gateway deployment spec",
+      "href": "https://sci-layer.vercel.app/articles/arc-agi-3-kaggle-gateway-deployment-spec"
+    },
+    {
+      "label": "Repeated-run eval protocol",
+      "href": "https://sci-layer.vercel.app/articles/asra-repeated-run-eval-arc-agi-3"
+    },
+    {
+      "label": "Phase 2 Original ARC results",
+      "href": "https://sci-layer.vercel.app/articles/asra-phase-2-original-arc-evaluation-results"
+    },
+    {
+      "label": "ASRA integrated architecture",
+      "href": "https://sci-layer.vercel.app/articles/asra-integrated-architecture"
+    }
+  ],
+  "journal": "SciLayer Systems",
+  "publishedAt": "2026-05-28",
+  "views": 0,
+  "downloads": 0,
+  "keywords": [
+    "ASRA",
+    "evaluation report",
+    "ARC-AGI-3",
+    "ARC Prize 2026",
+    "benchmarks",
+    "Kaggle scores",
+    "gateway migration"
+  ],
+  "authors": [
+    {
+      "name": "Ilakkuvaselvi Manoharan",
+      "orcid": "0009-0008-8073-5416",
+      "affiliation": "Nature Foundation Models"
+    }
+  ],
+  "manuscriptFile": "manuscript.md",
+  "versions": [
+    {
+      "version": 0,
+      "manuscriptFile": "manuscript.md",
+      "commit": "content-v0",
+      "createdAt": "2026-05-28",
+      "summary": "Interim v0: Track A complete, Track B partial (P1 0.03, P2 0.00), Phase 2 ARC results linked, Phases 3–9 TBD pending Stage 1."
+    }
+  ]
+}

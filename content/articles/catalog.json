@@ -43,10 +43,20 @@
       ]
     },
     {
+      "id": "asra-evaluation",
+      "title": "ASRA — Evaluation & Results",
+      "description": "Empirical evaluation reports, benchmark results, and competition score consolidations.",
+      "order": 4,
+      "articles": [
+        "asra-arc-agi-3-evaluation-report-v0",
+        "asra-phase-2-original-arc-evaluation-results"
+      ]
+    },
+    {
       "id": "comparative-analysis",
       "title": "Comparative & Position Papers",
       "description": "External framework comparisons and synthesis essays that situate ASRA relative to adjacent research programs.",
-      "order": 4,
+      "order": 5,
       "articles": [
         "asra-vs-buchanan-mathematical-theory-of-memory"
       ]
@@ -55,7 +65,7 @@
       "id": "nature-foundation-models",
       "title": "Nature Foundation Models",
       "description": "Organizational and scientific framing for Nature Foundation Models research themes.",
-      "order": 5,
+      "order": 6,
       "articles": [
         "nature-foundation-models-hierarchical-framework",
         "atlas-gs-end-to-end-implementation",
@@ -66,7 +76,7 @@
       "id": "platform-essays",
       "title": "Platform & Industry Essays",
       "description": "Essays on ML platform evolution, tooling, and engineering practice outside the core ASRA arc.",
-      "order": 6,
+      "order": 7,
       "articles": [
         "from-databricks-meets-pytorch-to-keras-ai-platform-evolution"
       ]
