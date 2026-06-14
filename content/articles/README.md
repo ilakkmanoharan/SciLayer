@@ -46,11 +46,23 @@ Nine-layer cognitive stack, in roadmap order.
 
 | Article | Slug |
 |---------|------|
+| ASRA Integrated Architecture — Nine-Layer Stack Reference | `asra-integrated-architecture` |
+| ARC-AGI-3 Kaggle Gateway Deployment Specification | `arc-agi-3-kaggle-gateway-deployment-spec` |
+| Repeated-Run Learning Evaluation for ARC-AGI-3 | `asra-repeated-run-eval-arc-agi-3` |
 | Phase 3 — Exploration, Memory, and Navigation (Technical Specification) | `asra-phase-3-exploration-memory-navigation-spec` |
 
 ---
 
-## 4. Comparative & Position Papers
+## 4. ASRA — Evaluation & Results
+
+| Article | Slug |
+|---------|------|
+| ASRA Evaluation Report — ARC-AGI-3 & Phase Benchmarks (v0) | `asra-arc-agi-3-evaluation-report-v0` |
+| Phase 2 — Original ARC Full-Dataset Evaluation Results | `asra-phase-2-original-arc-evaluation-results` |
+
+---
+
+## 5. Comparative & Position Papers
 
 | Article | Slug |
 |---------|------|
@@ -58,7 +70,7 @@ Nine-layer cognitive stack, in roadmap order.
 
 ---
 
-## 5. Nature Foundation Models
+## 6. Nature Foundation Models
 
 | Article | Slug |
 |---------|------|
@@ -68,7 +80,7 @@ Nine-layer cognitive stack, in roadmap order.
 
 ---
 
-## 6. Platform & Industry Essays
+## 7. Platform & Industry Essays
 
 | Article | Slug |
 |---------|------|
