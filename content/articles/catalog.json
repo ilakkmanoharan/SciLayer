@@ -37,6 +37,8 @@
       "order": 3,
       "articles": [
         "asra-integrated-architecture",
+        "arc-agi-3-kaggle-gateway-deployment-spec",
+        "asra-repeated-run-eval-arc-agi-3",
         "asra-phase-3-exploration-memory-navigation-spec"
       ]
     },

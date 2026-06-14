@@ -1,0 +1,63 @@
+{
+  "slug": "arc-agi-3-kaggle-gateway-deployment-spec",
+  "title": "ARC-AGI-3 Kaggle Gateway Deployment Specification",
+  "abstract": "Technical specification for the official ARC Prize 2026 Kaggle evaluation contract: validation vs scoring rerun, gateway sidecar integration, agent registration, submission.parquet schema, template-agent requirements, and shared ASRA notebook tooling. Documents the root cause of generic Kaggle Error failures and the gateway pattern that produced the first successful submission.",
+  "articleType": "Article",
+  "version": 1,
+  "status": "published_preprint",
+  "license": "CC-BY-4.0",
+  "githubUrl": "https://github.com/ilakkmanoharan/asra",
+  "repositoryLinks": [
+    {
+      "label": "Official ARC-AGI-3 Kaggle Starter",
+      "href": "https://github.com/arcprize/ARC-AGI-3-Kaggle-Starter"
+    },
+    {
+      "label": "ASRA shared gateway notebook builder",
+      "href": "https://github.com/ilakkmanoharan/asra/tree/main/kaggle-notebooks/_shared"
+    },
+    {
+      "label": "ASRA Phase 1 Kaggle kernel",
+      "href": "https://www.kaggle.com/code/ilakkmanoharan/asra-phase-1-arc-prize-2026"
+    },
+    {
+      "label": "ASRA integrated architecture",
+      "href": "https://sci-layer.vercel.app/articles/asra-integrated-architecture"
+    },
+    {
+      "label": "ASRA Phase 1 preprint (Experience Engine)",
+      "href": "https://sci-layer.vercel.app/articles/transition-centric-adaptive-reasoning-asra-phase-1"
+    }
+  ],
+  "journal": "SciLayer Systems",
+  "publishedAt": "2026-05-28",
+  "views": 0,
+  "downloads": 0,
+  "keywords": [
+    "ARC-AGI-3",
+    "ARC Prize 2026",
+    "Kaggle",
+    "gateway sidecar",
+    "deployment",
+    "submission.parquet",
+    "ASRA",
+    "evaluation contract"
+  ],
+  "authors": [
+    {
+      "name": "Ilakkuvaselvi Manoharan",
+      "orcid": "0009-0008-8073-5416",
+      "affiliation": "Nature Foundation Models"
+    }
+  ],
+  "manuscriptFile": "manuscript.md",
+  "versions": [
+    {
+      "version": 1,
+      "manuscriptFile": "manuscript.md",
+      "commit": "content-v1",
+      "createdAt": "2026-05-28",
+      "summary": "Initial SciLayer publication: ARC-AGI-3 Kaggle gateway deployment spec with validation/scoring modes, agent packaging, and migration checklist."
+    }
+  ]
+}
