@@ -59,6 +59,7 @@ Nine-layer cognitive stack, in roadmap order.
 |---------|------|
 | ASRA Evaluation Report — ARC-AGI-3 & Phase Benchmarks (v0) | `asra-arc-agi-3-evaluation-report-v0` |
 | Phase 2 — Original ARC Full-Dataset Evaluation Results | `asra-phase-2-original-arc-evaluation-results` |
+| Adaptive Scientific Discovery Benchmark (ASDB): A Two-Track Framework | `adaptive-scientific-discovery-benchmark-asdb` |
 
 ---
 

@@ -1,0 +1,61 @@
+{
+  "slug": "adaptive-scientific-discovery-benchmark-asdb",
+  "title": "Adaptive Scientific Discovery Benchmark (ASDB): A Two-Track Framework for Evaluating Interactive Agents",
+  "abstract": "Most agent benchmarks assume documented tool semantics and static ground-truth answers. Real scientific inquiry requires agents to learn what interventions do from state transitions, then infer hidden mechanisms, design discriminating experiments, and predict held-out observables. ASDB unifies two complementary tracks: Action Semantics Discovery (inferring an action map φ̂(a) from unlabeled controls) and Scientific Discovery Evaluation (recovering hidden theory classes under an intervention budget). Both share one interaction loop but score different constructs. Linked A→B episodes, decoy falsification, tiered difficulty, and decomposable metrics aim at construct validity for adaptive scientific reasoning evaluation.",
+  "articleType": "Concept Paper",
+  "version": 1,
+  "status": "published_preprint",
+  "license": "CC-BY-4.0",
+  "githubUrl": "https://github.com/ilakkmanoharan/ASDB",
+  "repositoryLinks": [
+    {
+      "label": "Understanding Action Semantics Inference Through State Transitions in ASRA",
+      "href": "https://sci-layer.vercel.app/articles/understanding-action-semantics-inference-through-state-transitions-in-asra"
+    },
+    {
+      "label": "Transition-Centric Adaptive Reasoning: ASRA Phase 1",
+      "href": "https://sci-layer.vercel.app/articles/transition-centric-adaptive-reasoning-asra-phase-1"
+    },
+    {
+      "label": "Architectures for Adaptive Scientific Reasoning Under Uncertainty",
+      "href": "https://sci-layer.vercel.app/articles/architectures-adaptive-scientific-reasoning-under-uncertainty"
+    },
+    {
+      "label": "Repeated-Run Learning Evaluation for ARC-AGI-3",
+      "href": "https://sci-layer.vercel.app/articles/asra-repeated-run-eval-arc-agi-3"
+    }
+  ],
+  "journal": "SciLayer Systems",
+  "publishedAt": "2026-06-19",
+  "views": 0,
+  "downloads": 0,
+  "keywords": [
+    "ASDB",
+    "scientific discovery benchmark",
+    "action semantics discovery",
+    "construct validity",
+    "interactive agents",
+    "intervention design",
+    "inverse problems",
+    "adaptive scientific reasoning",
+    "evaluation methodology",
+    "phase diagrams"
+  ],
+  "authors": [
+    {
+      "name": "Ilakkuvaselvi Manoharan",
+      "orcid": "0009-0008-8073-5416",
+      "affiliation": "Nature Foundation Models"
+    }
+  ],
+  "manuscriptFile": "manuscript.md",
+  "versions": [
+    {
+      "version": 1,
+      "manuscriptFile": "manuscript.md",
+      "commit": "content-v1",
+      "createdAt": "2026-06-19",
+      "summary": "Initial SciLayer preprint: two-track ASDB framework (semantics discovery + scientific discovery evaluation)."
+    }
+  ]
+}
