@@ -1,0 +1,61 @@
+{
+  "slug": "transition-centric-memory-and-directed-exploration-asra",
+  "title": "Transition-Centric Memory and Directed Exploration: Beyond Compressive Observation Memory in ASRA",
+  "abstract": "Most machine learning memory optimizes compression of observations—autoencoders, predictive coding, latent state descriptions. Scientific reasoning in unknown interactive worlds requires a different substrate: transition logs, exploration graphs, and experiment records optimized for intervention, not reconstruction. This concept paper contrasts compressive observation memory with transition-centric experiment memory, explains why causal structure emerges through interaction (Pearl), situates ASRA relative to Buchanan–Ma representation learning, and shows how ASRA Phase 3 decomposes directed exploration into novelty and usefulness under a step budget—turning episodic transitions into reusable exploration graphs rather than compressed latents.",
+  "articleType": "Concept Paper",
+  "version": 1,
+  "status": "published_preprint",
+  "license": "CC-BY-4.0",
+  "githubUrl": "https://github.com/ilakkmanoharan/asra",
+  "repositoryLinks": [
+    {
+      "label": "ASRA Phase 1 — Transition-centric experience",
+      "href": "https://sci-layer.vercel.app/articles/transition-centric-adaptive-reasoning-asra-phase-1"
+    },
+    {
+      "label": "ASRA Phase 3 — Directed exploration & episodic memory",
+      "href": "https://sci-layer.vercel.app/articles/directed-exploration-episodic-memory-asra-phase-3"
+    },
+    {
+      "label": "ASRA vs Buchanan–Ma — Mathematical Theory of Memory",
+      "href": "https://sci-layer.vercel.app/articles/asra-vs-buchanan-mathematical-theory-of-memory"
+    },
+    {
+      "label": "Phase 3 exploration implementation (asra-arc)",
+      "href": "https://github.com/ilakkmanoharan/asra/tree/main/asra-arc/src/asra/exploration"
+    }
+  ],
+  "journal": "SciLayer Systems",
+  "publishedAt": "2026-07-02",
+  "views": 0,
+  "downloads": 0,
+  "keywords": [
+    "transition-centric memory",
+    "exploration memory",
+    "novelty",
+    "usefulness",
+    "ASRA",
+    "Phase 3",
+    "scientific reasoning",
+    "episodic memory",
+    "causal inference",
+    "Buchanan–Ma"
+  ],
+  "authors": [
+    {
+      "name": "Ilakkuvaselvi Manoharan",
+      "orcid": "0009-0008-8073-5416",
+      "affiliation": "Nature Foundation Models"
+    }
+  ],
+  "manuscriptFile": "manuscript.md",
+  "versions": [
+    {
+      "version": 1,
+      "manuscriptFile": "manuscript.md",
+      "commit": "content-v1",
+      "createdAt": "2026-07-02",
+      "summary": "Initial SciLayer preprint unifying transition-centric vs compressive memory and Phase 3 novelty/usefulness exploration memory."
+    }
+  ]
+}
