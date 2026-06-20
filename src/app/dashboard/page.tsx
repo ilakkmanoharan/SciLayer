@@ -55,6 +55,14 @@ export default async function DashboardPage() {
             </dd>
           </div>
           <div>
+            <dt className="font-bold">Author profile</dt>
+            <dd>
+              <Link href={`/authors/${user.orcidId}`} className="font-bold text-cyan-700 hover:underline">
+                View all publications by category
+              </Link>
+            </dd>
+          </div>
+          <div>
             <dt className="font-bold">Role</dt>
             <dd className="capitalize">{user.role.toLowerCase()}</dd>
           </div>

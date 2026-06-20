@@ -88,3 +88,32 @@ export function groupArticlesByCollection<T extends { slug: string }>(
 
   return grouped;
 }
+
+export function sortArticlesByPublishedDate<T extends { publishedAt?: string }>(
+  articles: T[],
+  direction: "desc" | "asc" = "desc",
+): T[] {
+  return [...articles].sort((a, b) => {
+    const dateA = a.publishedAt ?? "";
+    const dateB = b.publishedAt ?? "";
+    if (dateA === dateB) {
+      return 0;
+    }
+    if (!dateA) {
+      return 1;
+    }
+    if (!dateB) {
+      return -1;
+    }
+    return direction === "desc" ? dateB.localeCompare(dateA) : dateA.localeCompare(dateB);
+  });
+}
+
+export function groupAuthorArticlesByCollection<T extends { slug: string; publishedAt?: string }>(
+  articles: T[],
+): { collection: ArticleCollection | null; articles: T[] }[] {
+  return groupArticlesByCollection(articles).map(({ collection, articles: items }) => ({
+    collection,
+    articles: sortArticlesByPublishedDate(items),
+  }));
+}
