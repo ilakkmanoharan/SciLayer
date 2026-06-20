@@ -8,6 +8,7 @@
       "description": "Architecture-level concept papers and pedagogical primers that frame the Adaptive Scientific Reasoning program before phase-specific implementation.",
       "order": 1,
       "articles": [
+        "intelligence-as-representation",
         "architectures-adaptive-scientific-reasoning-under-uncertainty",
         "understanding-action-semantics-inference-through-state-transitions-in-asra",
         "asra-for-decision-biology"

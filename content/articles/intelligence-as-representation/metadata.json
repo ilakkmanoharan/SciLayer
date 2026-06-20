@@ -1,0 +1,40 @@
+{
+  "slug": "intelligence-as-representation",
+  "title": "Intelligence as Representation Discovery: Ontologies, Semantics, and the Foundations of Adaptive Scientific Reasoning",
+  "abstract": "Intelligence is framed not as optimization alone but as the search for increasingly useful representations of reality. Before learning can succeed, a system must discover appropriate state spaces, action semantics, evaluation criteria, and ontologies. This concept paper argues that prompts, benchmarks, world models, and ontologies are central substrates of intelligence, and introduces ASRA as a representation-first framework that infers semantic operators from observed transitions before constructing causal world models.",
+  "articleType": "Concept Paper",
+  "version": 1,
+  "status": "published_preprint",
+  "license": "CC-BY-4.0",
+  "githubUrl": "https://github.com/ilakkmanoharan/asra",
+  "journal": "SciLayer Systems",
+  "publishedAt": "2026-05-28",
+  "views": 0,
+  "downloads": 0,
+  "keywords": [
+    "representation learning",
+    "ontology discovery",
+    "action semantics",
+    "world models",
+    "benchmarks",
+    "ASRA",
+    "scientific reasoning"
+  ],
+  "authors": [
+    {
+      "name": "Ilakkuvaselvi Manoharan",
+      "orcid": "0009-0008-8073-5416",
+      "affiliation": "Nature Foundation Models"
+    }
+  ],
+  "manuscriptFile": "manuscript.md",
+  "versions": [
+    {
+      "version": 1,
+      "manuscriptFile": "manuscript.md",
+      "commit": "content-v1",
+      "createdAt": "2026-05-28",
+      "summary": "Initial SciLayer preprint."
+    }
+  ]
+}
