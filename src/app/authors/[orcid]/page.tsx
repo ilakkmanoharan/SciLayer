@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { PageShell } from "@/components/page-shell";
 import { StatusBadge } from "@/components/status-badge";
+import { AuthorAvatar } from "@/components/author-avatar";
+import { PageShell } from "@/components/page-shell";
 import {
   getArticleCollectionIndex,
   groupAuthorArticlesByCollection,
-  sortArticlesByPublishedDate,
 } from "@/lib/article-catalog";
+import { getArticlesByAuthor, getAuthorByOrcid } from "@/lib/authors";
 import { demoArticles } from "@/lib/demo-data";
 import { pointValues } from "@/lib/points";
 
@@ -37,11 +38,9 @@ export default async function AuthorPage({
   params: Promise<{ orcid: string }>;
 }) {
   const { orcid } = await params;
-  const authorArticles = sortArticlesByPublishedDate(
-    demoArticles.filter((article) => article.authors.some((author) => author.orcid === orcid)),
-  );
+  const authorProfile = getAuthorByOrcid(orcid);
+  const authorArticles = getArticlesByAuthor(orcid);
   const grouped = groupAuthorArticlesByCollection(authorArticles);
-  const author = authorArticles[0]?.authors.find((item) => item.orcid === orcid);
   const points =
     authorArticles.length * pointValues.submitValidManuscript +
     authorArticles.filter((article) => article.status === "published_preprint").length *
@@ -50,23 +49,37 @@ export default async function AuthorPage({
   return (
     <PageShell
       eyebrow="Author profile"
-      title={author?.name ?? "SciLayer author"}
+      title={authorProfile?.name ?? "SciLayer author"}
       description="Publications grouped by research program and sorted by publication date."
     >
       <div className="grid gap-6 lg:grid-cols-[20rem_1fr]">
         <aside className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:sticky lg:top-6 lg:self-start">
-          <p className="text-sm font-bold uppercase tracking-wide text-cyan-700">Researcher ID</p>
-          <p className="mt-2 font-mono text-sm text-slate-700">{orcid}</p>
-          <p className="mt-5 text-sm font-bold uppercase tracking-wide text-cyan-700">
-            Affiliation
-          </p>
-          <p className="mt-2 text-slate-700">{author?.affiliation ?? "Pending profile sync"}</p>
-          <p className="mt-5 text-sm font-bold uppercase tracking-wide text-cyan-700">
-            Publications
-          </p>
+          <div className="flex items-center gap-4">
+            <AuthorAvatar name={authorProfile?.name ?? "Author"} size="lg" />
+            <div>
+              <p className="text-lg font-black text-slate-950">{authorProfile?.name ?? "Unknown author"}</p>
+              <Link
+                href={`https://orcid.org/${orcid}`}
+                className="mt-1 inline-block font-mono text-xs text-cyan-700 hover:underline"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {orcid}
+              </Link>
+            </div>
+          </div>
+          <p className="mt-5 text-sm font-bold uppercase tracking-wide text-cyan-700">Affiliation</p>
+          <p className="mt-2 text-slate-700">{authorProfile?.affiliation ?? "Pending profile sync"}</p>
+          <p className="mt-5 text-sm font-bold uppercase tracking-wide text-cyan-700">Publications</p>
           <p className="mt-2 text-4xl font-black text-slate-950">{authorArticles.length}</p>
           <p className="mt-5 text-sm font-bold uppercase tracking-wide text-cyan-700">Points</p>
           <p className="mt-2 text-4xl font-black text-slate-950">{points}</p>
+          <Link
+            href="/authors"
+            className="mt-6 inline-block text-sm font-bold text-cyan-700 hover:underline"
+          >
+            ← All authors
+          </Link>
         </aside>
 
         <section className="grid gap-10">
@@ -112,25 +125,11 @@ export default async function AuthorPage({
                           ) : null}
                           <StatusBadge status={article.status} />
                           <span className="text-sm text-slate-500">{article.articleType}</span>
-                          {article.journal ? (
-                            <span className="text-sm text-slate-500">{article.journal}</span>
-                          ) : null}
                         </div>
                         <h3 className="mt-4 text-2xl font-black text-slate-950">
                           <Link href={`/articles/${article.slug}`}>{article.title}</Link>
                         </h3>
                         <p className="mt-3 leading-7 text-slate-600">{article.abstract}</p>
-                        <div className="mt-4 flex flex-wrap gap-2">
-                          {article.classification.tags.slice(0, 5).map((tag) => (
-                            <Link
-                              key={tag}
-                              href={`/tags/${encodeURIComponent(tag)}`}
-                              className="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-700"
-                            >
-                              {tag}
-                            </Link>
-                          ))}
-                        </div>
                       </article>
                     );
                   })}

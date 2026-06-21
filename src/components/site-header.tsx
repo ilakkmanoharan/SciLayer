@@ -3,6 +3,7 @@ import { AuthNav } from "@/components/auth-nav";
 
 const navItems = [
   { href: "/articles", label: "Articles" },
+  { href: "/authors", label: "Authors" },
   { href: "/journals", label: "Journals" },
   { href: "/submit", label: "Submit" },
   { href: "/search", label: "Search" },
