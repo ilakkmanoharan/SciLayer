@@ -83,6 +83,15 @@
       "articles": [
         "from-databricks-meets-pytorch-to-keras-ai-platform-evolution"
       ]
+    },
+    {
+      "id": "hire-my-agents",
+      "title": "Hire My Agents — Architecture & Product",
+      "description": "Concept papers on workforce agents, memory infrastructure, and accountable agent design.",
+      "order": 8,
+      "articles": [
+        "agent-context-as-a-data-layer"
+      ]
     }
   ]
 }
