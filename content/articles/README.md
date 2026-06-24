@@ -16,6 +16,7 @@ Architecture-level concept papers and primers.
 |---------|------|
 | Intelligence as Representation Discovery | `intelligence-as-representation` |
 | Transition-Centric Memory and Directed Exploration | `transition-centric-memory-and-directed-exploration-asra` |
+| ASRA-LoRA: Adaptive Scientific Reasoning through LoRA Fine-Tuning | `asra-lora-adaptive-scientific-reasoning-lora-fine-tuning` |
 | Architectures for Adaptive Scientific Reasoning Under Uncertainty | `architectures-adaptive-scientific-reasoning-under-uncertainty` |
 | Understanding Action Semantics Inference Through State Transitions in ASRA | `understanding-action-semantics-inference-through-state-transitions-in-asra` |
 | ASRA for Decision Biology | `asra-for-decision-biology` |

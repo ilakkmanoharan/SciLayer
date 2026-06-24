@@ -10,6 +10,7 @@
       "articles": [
         "intelligence-as-representation",
         "transition-centric-memory-and-directed-exploration-asra",
+        "asra-lora-adaptive-scientific-reasoning-lora-fine-tuning",
         "architectures-adaptive-scientific-reasoning-under-uncertainty",
         "understanding-action-semantics-inference-through-state-transitions-in-asra",
         "asra-for-decision-biology"
