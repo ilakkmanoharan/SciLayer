@@ -81,6 +81,7 @@ Nine-layer cognitive stack, in roadmap order.
 | Nature Foundation Models: A Hierarchical Framework | `nature-foundation-models-hierarchical-framework` |
 | Atlas-GS: An End-to-End Implementation of Gaussian World Modeling | `atlas-gs-end-to-end-implementation` |
 | Orbit Wars Phase 4: NFM × ASRA × Atlas-GS for Multi-Agent RTS | `orbit-wars-nfm-asra-atlas-phase-4` |
+| Concepts Used in the ASRA-NFM Implementation | `concepts-used-in-asra-nfm-implementation` |
 
 ---
 
